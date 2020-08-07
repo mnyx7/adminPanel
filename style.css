@@ -1,0 +1,259 @@
+nav{
+    height: 270px;
+    background: url("img/header.png") center/cover no-repeat;
+}
+.navbar .navbar-collapse {
+    padding: 20px;
+    margin-left: 20px;
+}
+.navbar-collapse li{
+    padding: 3px;
+}
+.fas.fa-search{
+    position:absolute;
+    color: #BFBDBD;
+}
+.fa-search + input{
+    padding-left: 25px;
+}
+span{
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+}
+.english{
+    color: #CADBFF !important;
+}
+.english:hover{
+    color: #CADBFF;
+    opacity: .9;
+}
+#menu img {
+    cursor: pointer;
+    padding: 13px 0;
+}
+#user img{
+    float: left;
+    padding: 0 10px;
+}
+#user span{
+    font-size: 10px;
+    line-height: 13px;
+}
+#user{
+    margin-left: 30px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #CADBFF;
+    padding: 0 ;
+    width: 200px;
+}
+#search{
+    margin: -50px 0 0 -10px;
+}
+#users{
+    margin: 0 0 0 -10px;
+}
+#search h1{
+    padding: 20px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    color: #2E2E2E;
+}
+#search h3, .dropdown-menu a{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #757575;
+}
+#search form{
+    margin: 10px;
+}
+#search form input, #search select{
+    margin: 5px;
+    background: #FFFFFF;
+    border: 1px solid #CED4DA;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+#search button {
+    background: #F6F6F6;
+    border-radius: 4px;
+    margin: 20px 0 20px 20px;
+}
+.data button {
+    background: #F6F6F6;
+    margin: 20px 0 20px 20px;
+    border-radius: 4px;
+}
+#moreinputs button:nth-child(2){
+    float: right;
+    background: #0045CC;
+    border-radius: 4px;
+    color:#fff;
+    margin: 20px;
+}
+#leftMenu .col-md-3 a{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+    color: #212121;
+    padding:10px;
+    max-width: 300px;
+}
+ul {
+    list-style-type: none;
+}
+#leftMenu .nav-link{
+    position: relative;
+}
+#leftMenu .nav-link:hover::after{
+    display: block;
+}
+#leftMenu .nav-link::after{
+    position: absolute;
+    content: "";
+    width: 6px;
+    height:6px;
+    background-color: #0045CC;
+    border-radius: 50%;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none;
+}
+#leftMenu li a:hover{
+    color: #0045CC;
+    text-decoration: none;
+    background: #99BCFF;
+    border-radius: 0px 5px 5px 0px;
+}
+.myTable{
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+.table button{
+    padding: 10px 20px;
+    margin: 0;
+    background: #F6F6F6;
+    border-radius: 4px;
+}
+th, .bold{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    color: #212121;
+    cursor: pointer;
+    text-align: center;
+}
+.bold{
+    padding: 20px 0;
+}
+tr{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 20px;
+    color: #767676;
+}
+h5 {
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 2px solid #0045CC; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+}  
+h5 span { 
+    background:#fff; 
+    padding:0 10px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    color: #000000;
+}
+.text{  
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    color: #767676;
+}
+.modal-body input{
+    float:left;
+    margin: 8px 20px;
+}
+td img{
+    cursor: pointer;
+}
+td{
+    vertical-align: middle !important;
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    border-top: none;
+
+}
+.myClose .save{
+    border-radius: 4px;
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+
+}
+.myClose{
+    background-color: #F6F6F6;
+    color: #0045CC;   
+}
+.save{
+    background: #0045CC;
+    color: #FFFFFF;
+}
+.modal-footer p{
+    font-family: Segoe UI;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    color: #0045CC;
+}
+.pagination li a:hover{
+    background: #0045CC;
+    color: #fff;
+}
+.rotate , .up{
+    transform: rotate(180deg);
+}
+.down{
+    transform: rotate(0);
+}
+.modal-backdrop {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+}
+.col-md-12{
+    padding:0;
+}
+@media only screen and (max-width: 960px) {
+    #search{margin: 10px 0;}
+        
+    #language a, #menu{
+        margin-left: 50px;
+    }
+}

@@ -1,0 +1,867 @@
+<!DOCTYPE HTML>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time Soft</title>
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.2.1/css/flag-icon.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-lg navbar-dark align-items-start py-3">
+            <div class="container-fluid">
+                <a class="navbar-brand active" href="#">
+                    <img src="img/logo.png" alt="Əmək Münasibətləri və Məşqulluq Alt Sistemi " />
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li>
+                            <form class="form-inline">
+                                <i class="fas fa-search mx-5 px-3"></i>
+                                <div class="md-form my-0 mx-5">
+                                    <input class="form-control mr-sm-2" type="text" placeholder="       Axtar"
+                                        aria-label="Search">
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <div class="nav-item dropdown ml-auto" id="language">
+                                <a class="nav-link english" href="#" id="navbarDropdownLanguage" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false"><img src="img/eng.png" alt="English" />
+                                    English <i class="fas fa-chevron-down"></i>
+                                </a>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdownLanguage">
+                                    <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-az"> </span>
+                                        Azerbaijani</a>
+                                    <a class="dropdown-item" href="#"><span class="flag-icon flag-icon-ru"> </span>
+                                        Russian</a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link my-menu" href="#"><img src="img/menu.png" id="menu" alt="Menu"></a>
+                        </li>
+                        <li class="nav-item">
+                            <div class="nav-item dropdown no-arrow">
+                                <a id="user" class="nav-link" href="#" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <img class="img-profile rounded-circle" src="img/user.png" alt="User" />
+                                    <span class="mr-2 small">Xoş gördük</span>
+                                    <p>Fərid Vəliyev</p>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                    aria-labelledby="user">
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Profile
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Settings
+                                    </a>
+                                    <a class="dropdown-item" href="#">
+                                        <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Activity Log
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="leftMenu">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3 my-3">
+                        <ul class="list-group">
+                            <li>
+                                <a class="nav-link" href="#">
+                                    <img src="img/mainpage.png" alt="Ana səhifə" />
+                                    <span>Ana səhifə</span>
+                                </a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#" data-toggle="collapse" data-target="#muraciyyet"
+                                    aria-expanded="true" aria-controls="muraciyyet">
+                                    <img src="img/apply.png" alt="Müraciət" />
+                                    <span>Müraciət edən şəxslərlə iş</span>
+                                </a>
+                                <div id="muraciyyet" class="collapse" aria-labelledby="headingTwo"
+                                    data-parent="#accordionSidebar">
+                                    <div class="bg-white py-2 collapse-inner rounded d-flex flex-column px-5">
+                                        <a class="collapse-item active" href="#">İşaxtaran şəxslər</a>
+                                        <a class="collapse-item" href="#">İşsiz şəxslər</a>
+                                        <a class="collapse-item" href="#">İşlə təmin edilmiş şəxslər</a>
+                                        <a class="collapse-item" href="#">Qeydiyyatı dayandırılmış şəxslər</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-9">
+                        <div id="search" class="myTable">
+                            <h1>Axtariş filtrələri</h1>
+                            <section class="d-flex flex-wrap justify-content-between mx-3">
+                                <form>
+                                    <h3>FIN</h3>
+                                    <input type="text" />
+                                </form>
+                                <form>
+                                    <h3>Ad, soyad, ata adi</h3>
+                                    <input type="text" />
+                                </form>
+
+                                <form>
+                                    <h3>İşlə təmin olunma forması</h3>
+                                    <select class="form-control form-control-sm">
+                                        <option value="form1">İşlə təmin olunma forması 1</option>
+                                        <option value="form2">İşlə təmin olunma forması 2</option>
+                                        <option value="form3">İşlə təmin olunma forması 3</option>
+                                    </select>
+                                </form>
+                                <form>
+                                    <h3>Tarixdən</h3>
+                                    <input type="date" class="form-control form-control-sm" />
+                                </form>
+                                <form>
+                                    <h3>Tarixə</h3>
+                                    <input type="date" class="form-control form-control-sm" />
+                                </form>
+
+                                <div id="more" class="collapse">
+                                    <div class="d-flex flex-row flex-wrap justify-content-start">
+                                        <form>
+                                            <h3>İxtisas</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="İxtisas">İxtisas 1</option>
+                                                <option value="İxtisas">İxtisas 2</option>
+                                                <option value="İxtisas">İxtisas 3</option>
+                                            </select>
+                                        </form>
+                                        <form>
+                                            <h3>Peşə</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="Peşə">Peşə 1</option>
+                                                <option value="Peşə">Peşə 2</option>
+                                                <option value="Peşə">Peşə 3</option>
+                                            </select>
+                                        </form>
+                                        <form>
+                                            <h3>Təhsil səviyyəsi</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="Təhsil">Təhsil səviyyəsi 1</option>
+                                                <option value="Təhsil">Təhsil səviyyəsi 2</option>
+                                                <option value="Təhsil">Təhsil səviyyəsi 3</option>
+                                            </select>
+                                        </form>
+                                        <form>
+                                            <h3>İş təcrübəsi</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="İş">İş təcrübəsi 1</option>
+                                                <option value="İş">İş təcrübəsi 2</option>
+                                                <option value="İş">İş təcrübəsi 3</option>
+                                            </select>
+                                        </form>
+                                        <form>
+                                            <h3>Sosial vəziyyəti</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="Sosial">Sosial vəziyyəti 1</option>
+                                                <option value="Sosial">Sosial vəziyyəti 2</option>
+                                                <option value="Sosial">Sosial vəziyyəti 3</option>
+                                            </select>
+                                        </form>
+                                        <form>
+                                            <h3>Ailə vəziyyəti</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="Ailə">Evli</option>
+                                                <option value="Ailə">Subay</option>
+                                            </select>
+                                        </form>
+                                        <form>
+                                            <h3>Cinsi</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="Cinsi">Kişi</option>
+                                                <option value="Cinsi">Qadin</option>
+                                            </select>
+                                        </form>
+                                        <form>
+                                            <h3>Təvəllüd aralığ</h3>
+                                            <input type="date" class="form-control form-control-sm" />
+                                        </form>
+                                        <form>
+                                            <h3>Qeydiyyat rayonu</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="Qeydiyyat">Qeydiyyat rayonu 1</option>
+                                                <option value="Qeydiyyat">Qeydiyyat rayonu 2</option>
+                                                <option value="Qeydiyyat">Qeydiyyat rayonu 3</option>
+                                            </select>
+                                        </form>
+                                        <form>
+                                            <h3>Məşğulluq mərkəzi</h3>
+                                            <select class="form-control form-control-sm">
+                                                <option value="Məşğulluq">Məşğulluq mərkəzi 1</option>
+                                                <option value="Məşğulluq">Məşğulluq mərkəzi 2</option>
+                                                <option value="Məşğulluq">Məşğulluq mərkəzi 3</option>
+                                            </select>
+                                        </form>
+                                    </div>
+                                </div>
+                            </section>
+                            <div id="moreinputs">
+                                <button type="button" class="btn btn-default etrafli" aria-controls="more"
+                                    data-toggle="collapse" data-target="#more" aria-expanded="true">
+                                    + Ətraflı
+                                </button>
+                                <button type="button" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                    Axtarış et
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row my-3" id="users">
+                            <div class="col-md-12">
+                                <div class="d-flex justify-content-between flex-wrap">
+                                    <p class="bold">Ümumi nəticələr [356]</p>
+                                    <div class="data">
+                                        <button type="button" class="btn btn-default">
+                                            <img src="img/pdf.png" alt="PDF">
+                                            PDF
+                                        </button>
+                                        <button type="button" class="btn btn-default">
+                                            <img src="img/excel.png" alt="Excel">
+                                            Excel
+                                        </button>
+                                        <button type="button" class="btn btn-default">
+                                            <img src="img/print.png" alt="Print">
+                                            Çap et
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12 myTable table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">S/S</th>
+                                            <th scope="col">FIN</th>
+                                            <th scope="col">Ad, Soyad, Ata adı</th>
+                                            <th scope="col">Müraciətin tarixi</th>
+                                            <th scope="col">Müraciətin növü</th>
+                                            <th scope="col">Qəbul et</th>
+                                            <th scope="col">Ləğv et</th>
+                                            <th scope="col">Ətrafli</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1 <img class="mx-5" src="img/user1.png" alt="Image"></td>
+                                            <td>25UGAP3</td>
+                                            <td>Quliyeva İnci Vidadi</td>
+                                            <td>01.01.2020</td>
+                                            <td>İş üçün</td>
+                                            <td><img data-toggle="modal" data-target="#saveModal" src="img/correct.png"
+                                                    alt="Correct"></td>
+                                            <td><img data-toggle="modal" data-target="#closeModal" src="img/close.png"
+                                                    alt="Close"></td>
+                                            <td><img src="img/more.png" aria-controls="user1" data-toggle="collapse"
+                                                    data-target="#user1" aria-expanded="true" alt="More"
+                                                    class="details up">
+                                            </td>
+                                        </tr>
+                                        <tr id="user1" class="collapse">
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/apply.png" alt="PDF">
+                                                    Vətəndaşın şəxsi işi
+                                                </button>
+                                            </th>
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/ferdi.png" alt="Excel">
+                                                    Fərdi məşğulluq vərəqi
+                                                </button>
+                                            </th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr scope="row">
+                                            <td >2<img class="mx-5" src="img/user2.png" alt="Image"></td>
+                                            <td>25UGAP3</td>
+                                            <td>Quliyeva İnci Vidadi</td>
+                                            <td>01.01.2020</td>
+                                            <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                            <td><img data-toggle="modal" data-target="#saveModal" src="img/correct.png"
+                                                    alt="Correct"></td>
+                                            <td><img data-toggle="modal" data-target="#closeModal" src="img/close.png"
+                                                    alt="Close"></td>
+                                            <td><img src="img/more.png" aria-controls="user2" data-toggle="collapse"
+                                                    data-target="#user2" aria-expanded="true" alt="More"
+                                                    class="details up">
+                                            </td>
+                                        </tr>
+                                        <tr id="user2" class="collapse">
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/apply.png" alt="PDF">
+                                                    Vətəndaşın şəxsi işi
+                                                </button>
+                                            </th>
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/ferdi.png" alt="Excel">
+                                                    Fərdi məşğulluq vərəqi
+                                                </button>
+                                            </th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>3<img class="mx-5" src="img/user3.png" alt="Image"></td>
+                                            <td>25UGAP3</td>
+                                            <td>Quliyev Vaqif Əlibala</td>
+                                            <td>01.01.2020</td>
+                                            <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                            <td><img data-toggle="modal" data-target="#saveModal" src="img/correct.png"
+                                                    alt="Correct"></td>
+                                            <td><img data-toggle="modal" data-target="#closeModal" src="img/close.png"
+                                                    alt="Close"></td>
+                                            <td><img src="img/more.png" aria-controls="user3" data-toggle="collapse"
+                                                    data-target="#user3" aria-expanded="true" alt="More"
+                                                    class="details up">
+                                            </td>
+                                        </tr>
+                                        <tr id="user3" class="collapse">
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/apply.png" alt="PDF">
+                                                    Vətəndaşın şəxsi işi
+                                                </button>
+                                            </th>
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/ferdi.png" alt="Excel">
+                                                    Fərdi məşğulluq vərəqi
+                                                </button>
+                                            </th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>4<img class="mx-5" src="img/user4.png" alt="Image"></td>
+                                            <td>25UGAP3</td>
+                                            <td>Qasımov Rüfət Qırxlar</td>
+                                            <td>01.01.2020</td>
+                                            <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                            <td><img data-toggle="modal" data-target="#saveModal" src="img/correct.png"
+                                                    alt="Correct"></td>
+                                            <td><img data-toggle="modal" data-target="#closeModal" src="img/close.png"
+                                                    alt="Close"></td>
+                                            <td><img src="img/more.png" aria-controls="user4" data-toggle="collapse"
+                                                    data-target="#user4" aria-expanded="true" alt="More"
+                                                    class="details up">
+                                            </td>
+                                        </tr>
+                                        <tr id="user4" class="collapse">
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/apply.png" alt="PDF">
+                                                    Vətəndaşın şəxsi işi
+                                                </button>
+                                            </th>
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/ferdi.png" alt="Excel">
+                                                    Fərdi məşğulluq vərəqi
+                                                </button>
+                                            </th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                        <tr>
+                                            <td>5<img class="mx-5" src="img/user5.png" alt="Image"></td>
+                                            <td>25UGAP3</td>
+                                            <td>Miriyev Zakir Qurban</td>
+                                            <td>01.01.2020</td>
+                                            <td>İşaxtaran kimi qeydiyyatın dayandırılması</td>
+                                            <td><img data-toggle="modal" data-target="#saveModal" src="img/correct.png"
+                                                    alt="Correct"></td>
+                                            <td><img data-toggle="modal" data-target="#closeModal" src="img/close.png"
+                                                    alt="Close"></td>
+                                            <td><img src="img/more.png" aria-controls="user5" data-toggle="collapse"
+                                                    data-target="#user5" aria-expanded="true" alt="More"
+                                                    class="details up">
+                                            </td>
+                                        </tr>
+                                        <tr id="user5" class="collapse">
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/apply.png" alt="PDF">
+                                                    Vətəndaşın şəxsi işi
+                                                </button>
+                                            </th>
+                                            <th scope="col">
+                                                <button type="button" class="btn btn-default">
+                                                    <img src="img/ferdi.png" alt="Excel">
+                                                    Fərdi məşğulluq vərəqi
+                                                </button>
+                                            </th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div aria-label="Page navigation">
+                                    <ul class="pagination justify-content-center">
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Previous">
+                                                <span>&laquo;</span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                        <li class="page-item">
+                                            <a class="page-link" href="#" aria-label="Next">
+                                                <span>&raquo;</span>
+                                                <span class="sr-only">Next</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="modal fade" id="closeModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5><span>Yeni müraciəti ləğv et</span></h5>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <input type="checkbox" />
+                                                    <p class="text">Təqdim olunmuş sənədlərdə və məlumatlarda təhrif
+                                                        olunmuş
+                                                        və
+                                                        ya düzgün
+                                                        olmayan
+                                                        məlumatlar aşkar edildikdə</p>
+                                                </div>
+                                                <hr />
+                                                <div>
+                                                    <input type="checkbox" />
+                                                    <p class="text">Hərbi və ya alternativ xidmətdə olduqda, hərbi
+                                                        toplanışlarda
+                                                        olduqda</p>
+                                                </div>
+                                                <hr />
+                                                <div>
+                                                    <input type="checkbox" />
+                                                    <p class="text">Barəsində azadlıqdan məhrumetmə və ya tibbi
+                                                        xarakterli
+                                                        məcburi
+                                                        tədbirlərin tətbiqinə
+                                                        dair məhkəmənin qanuni qüvvəyə minmiş qərarı olduqda</p>
+                                                </div>
+                                                <hr />
+                                                <div>
+                                                    <input type="checkbox" />
+                                                    <p class="text"> Vəfat etdikdə və ya məhkəmənin qanuni qüvvəyə
+                                                        minmiş
+                                                        qərarı
+                                                        əsasında
+                                                        xəbərsiz itkin
+                                                        düşmüş və ya ölmüş elan edildikdə</p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer justify-content-center">
+                                                <button type="button" class="btn myClose"
+                                                    data-dismiss="modal">Bağla</button>
+                                                <button type="button" class="btn save">Yadda saxla</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="modal fade" id="saveModal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog modal-xl modal-dialog-centered" role="document">
+                                        <div class="modal-content">
+                                            <div class="table-responsive p-3">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th scope="col"><input type="checkbox" /></th>
+                                                            <th scope="col">S/S</th>
+                                                            <th scope="col">Təşkilatın adı</th>
+                                                            <th scope="col">Mülkiyyət forması</th>
+                                                            <th scope="col">Fəaliyyət sahəsi</th>
+                                                            <th scope="col">Təşkilatın hüquqi ünvanı</th>
+                                                            <th scope="col">Təşkilatın telefonu</th>
+                                                            <th scope="col">Vəzifə</th>
+                                                            <th scope="col">Əmək haqqı</th>
+                                                            <th scope="col">Ətraflı</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>1</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" data-toggle="collapse"
+                                                                    data-target=".multi-collapse" aria-expanded="false"
+                                                                    aria-controls="more1" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr class="collapse multi-collapse more1">
+                                                            <td></td>
+                                                            <td>İş rejimi</td>
+                                                            <td></td>
+                                                            <td>Növbəli</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr class="collapse multi-collapse more1">
+                                                            <td></td>
+                                                            <td>Həftəlik iş saatı </td>
+                                                            <td></td>
+                                                            <td>40 saat</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+
+                                                        <tr class="collapse multi-collapse more1">
+                                                            <td></td>
+                                                            <td>İş qrafiki</td>
+                                                            <td></td>
+                                                            <td>9:00-18:00</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr class="collapse multi-collapse more1">
+                                                            <td></td>
+                                                            <td>İş təcrübəsi</td>
+                                                            <td></td>
+                                                            <td>3 il</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr class="collapse multi-collapse more1">
+                                                            <td></td>
+                                                            <td>Yaşayış tələbi</td>
+                                                            <td></td>
+                                                            <td>30-40</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr class="collapse multi-collapse more1">
+                                                            <td></td>
+                                                            <td>İş yeri</td>
+                                                            <td></td>
+                                                            <td>Gəncə, Abdulla Şaiq 5</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr class="collapse multi-collapse more1">
+                                                            <td></td>
+                                                            <td>İş qrafiki</td>
+                                                            <td></td>
+                                                            <td>Xeyr</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr class="collapse multi-collapse more1">
+                                                            <td></td>
+                                                            <td>Digər tələblər</td>
+                                                            <td></td>
+                                                            <td>-------------------</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>2</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>3</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>4</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>5</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>5</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>6</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>7</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>8</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>9</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td><input type="checkbox" /></td>
+                                                            <td>10</td>
+                                                            <td>Qızıltac MMC</td>
+                                                            <td>Özəl</td>
+                                                            <td>Tikinti</td>
+                                                            <td>Nərimanov rayonu, M. Xiyabani küç. 9</td>
+                                                            <td>434-88-99</td>
+                                                            <td>Sürücü</td>
+                                                            <td>500 Azn</td>
+                                                            <td><img class="rotate more" src="img/more.png"
+                                                                    alt="More" />
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="modal-footer d-flex justify-content-between">
+                                                <p>Ümumi nəticələr [1297]</p>
+                                                <div aria-label="Page navigation">
+                                                    <ul class="pagination justify-content-between">
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" aria-label="Previous">
+                                                                <span>&laquo;</span>
+                                                                <span class="sr-only">Previous</span>
+                                                            </a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" aria-label="Next">
+                                                                <span>&raquo;</span>
+                                                                <span class="sr-only">Next</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div>
+                                                    <button type="button" class="btn save">Göndəriş təklif et
+                                                        [4]</button>
+                                                    <button type="button" class="btn myClose"
+                                                        data-dismiss="modal">Bağla</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
